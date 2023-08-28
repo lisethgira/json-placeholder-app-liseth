@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  /* Elimina el margen */
+  padding: 0;
+  /* Elimina el relleno */
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos de la tabla */
+.contenedor-tabla {
+  border: 4px solid #007bff;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+
+.table-custom th {
+  background-color: #3498db;
+  /* Color de fondo para el encabezado */
+  color: white;
+  /* Color de texto en el encabezado */
+}
+
+.table-custom td,
+.table-custom th {
+  border: 4px solid #fff;
+  /* Borde de celda */
+  border-radius: 8px;
+  margin: 0;
+}
+
+/* Estilos del formulario */
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 30%;
+  margin-top: 5px;
+  border: 4px solid #007bff;
+}

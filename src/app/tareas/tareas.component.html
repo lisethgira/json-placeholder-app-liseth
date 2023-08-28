@@ -1,0 +1,125 @@
+<!-- Contenido de la pestaña de Tareas -->
+<div id="tareas" class="tab-content mt-5 mx-5">
+  <div class="d-flex justify-content-center">
+    <img src="../../assets/images/logoSinFondo.png" alt="logo" width="150" height="150">
+  </div>
+  <h1 class="text-center">Lista de Tareas </h1>
+  <!-- Formulario para agregar nuevas tareas -->
+  <div class="form-group mb-3">
+    <label for="nombreTarea">Ingresa Nueva Tarea</label>
+    <br>
+    <input class="shadow rounded-3" type="text" id="nombreTarea" required>
+    <button id="agregarTarea" class="btn btn btn-outline-primary bg-primary-subtle shadow border-2 mx-2">Agregar<i class="fa-solid fa-folder-plus mx-2"></i></button>
+  </div>
+  <!-- Tabla para mostrar las tareas -->
+  <div class="contenedor-tabla shadow">
+    <table class="table-custom table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre de la Tarea</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaTareas">
+        <!-- Las tareas se agregarán dinámicamente aquí desde JavaScript -->
+        <tr>
+          <td>1</td>
+          <td>delectus aut autem</td>
+          <td>Completada</td>
+          <td>
+            <button class="btn-editar btn btn btn-light"><i class="fa-solid fa-pen-to-square"
+                style="color: #f8d65b;"></i></button>
+            <button class="btn-eliminar btn btn-light"><i class="fa-solid fa-trash"
+                style="color: #d10000;"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>delectus aut autem</td>
+          <td>Pendiente</td>
+          <td>
+            <button class="btn-editar btn btn btn-light"><i class="fa-solid fa-pen-to-square"
+                style="color: #f8d65b;"></i></button>
+            <button class="btn-eliminar btn btn-light"><i class="fa-solid fa-trash"
+                style="color: #d10000;"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>delectus aut autem</td>
+          <td>Completada</td>
+          <td>
+            <button class="btn-editar btn btn btn-light"><i class="fa-solid fa-pen-to-square"
+                style="color: #f8d65b;"></i></button>
+            <button class="btn-eliminar btn btn-light"><i class="fa-solid fa-trash"
+                style="color: #d10000;"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>delectus aut autem</td>
+          <td>Pendiente</td>
+          <td>
+            <button class="btn-editar btn btn btn-light"><i class="fa-solid fa-pen-to-square"
+                style="color: #f8d65b;"></i></button>
+            <button class="btn-eliminar btn btn-light"><i class="fa-solid fa-trash"
+                style="color: #d10000;"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>delectus aut autem</td>
+          <td>Completada</td>
+          <td>
+            <button class="btn-editar btn btn btn-light"><i class="fa-solid fa-pen-to-square"
+                style="color: #f8d65b;"></i></button>
+            <button class="btn-eliminar btn btn-light"><i class="fa-solid fa-trash"
+                style="color: #d10000;"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>delectus aut autem</td>
+          <td>Pendiente</td>
+          <td>
+            <button class="btn-editar btn btn btn-light"><i class="fa-solid fa-pen-to-square"
+                style="color: #f8d65b;"></i></button>
+            <button class="btn-eliminar btn btn-light"><i class="fa-solid fa-trash"
+                style="color: #d10000;"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>delectus aut autem</td>
+          <td>Completada</td>
+          <td>
+            <button class="btn-editar btn btn btn-light"><i class="fa-solid fa-pen-to-square"
+                style="color: #f8d65b;"></i></button>
+            <button class="btn-eliminar btn btn-light"><i class="fa-solid fa-trash"
+                style="color: #d10000;"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- Paginación -->
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center mt-5">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
