@@ -6,67 +6,35 @@
     </div>
     <h1 class="text-center mb-3">Usuarios</h1>
     <div class="row mx-5">
-      <div class="col-md-6">
+      <div class="col-md-6" *ngFor="let usuario of usuarios">
         <div class="container mt-5 card shadow rounded-3 border-4 border-primary-subtle">
           <div class="row">
             <div class="col-md-6 ">
               <div class="wrapper">
                 <div class="profile">
-                  <img src="https://xsgames.co/randomusers/avatar.php?g=female" class="thumbnail foto">
-                  <h3 class="name">Leanne Graham</h3>
-                  <p class="title">Bret</p>
-                  <p class="description"><strong>Teléfono:</strong> 1-770-736-8031 x56442</p>
-                  <p class="description"><strong>Sitio Web:</strong> <a href="http://hildegard.org"
-                      target="_blank">hildegard.org</a></p>
+                  <img src="https://xsgames.co/randomusers/avatar.php?g={{getRandomGender()}}&user={{usuario.username}}" class="thumbnail foto">
+                  <h3 class="name">{{usuario.name}}</h3>
+                  <p class="username">{{usuario.username}}</p>
+                  <hr class="border-4 border-primary">
+                  <p class="description"><strong>Teléfono:</strong>{{usuario.phone}}</p>
+                  <p class="description"><strong>Sitio Web:</strong> <a href="http://{{usuario.website}}"
+                      target="_blank">{{usuario.website}}</a></p>
                 </div>
               </div>
             </div>
             <div class="col-md-6 mt-4">
               <div class="residencia">
                 <h2>Dirección:</h2>
-                <p><strong>Calle:</strong> Kulas Light</p>
-                <p><strong>Suite:</strong> Apt. 556</p>
-                <p><strong>Ciudad:</strong> Gwenborough</p>
-                <p><strong>Código Postal:</strong> 92998-3874</p>
+                <p><strong>Calle:</strong> {{usuario.address.street}}</p>
+                <p><strong>Suite:</strong> {{usuario.address.suite}}</p>
+                <p><strong>Ciudad:</strong> {{usuario.address.city}}</p>
+                <p><strong>Código Postal:</strong> {{usuario.address.zipcode}}</p>
               </div>
               <div class="empresa mt-5">
                 <h2>Compañía:</h2>
-                <p><strong>Nombre de la Compañía:</strong> Romaguera-Crona</p>
-                <p><strong>Eslogan:</strong> Multi-layered client-server neural-net</p>
-                <p><strong>Área de Especialización:</strong> Harness real-time e-markets</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="container mt-5 card shadow rounded-3 border-4 border-primary-subtle">
-          <div class="row">
-            <div class="col-md-6 ">
-              <div class="wrapper">
-                <div class="profile">
-                  <img src="https://xsgames.co/randomusers/avatar.php?g=male" class="thumbnail foto">
-                  <h3 class="name">Leanne Graham</h3>
-                  <p class="title">Bret</p>
-                  <p class="description"><strong>Teléfono:</strong> 1-770-736-8031 x56442</p>
-                  <p class="description"><strong>Sitio Web:</strong> <a href="http://hildegard.org"
-                      target="_blank">hildegard.org</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 mt-4">
-              <div class="residencia">
-                <h2>Dirección:</h2>
-                <p><strong>Calle:</strong> Kulas Light</p>
-                <p><strong>Suite:</strong> Apt. 556</p>
-                <p><strong>Ciudad:</strong> Gwenborough</p>
-                <p><strong>Código Postal:</strong> 92998-3874</p>
-              </div>
-              <div class="empresa mt-5">
-                <h2>Compañía:</h2>
-                <p><strong>Nombre de la Compañía:</strong> Romaguera-Crona</p>
-                <p><strong>Eslogan:</strong> Multi-layered client-server neural-net</p>
-                <p><strong>Área de Especialización:</strong> Harness real-time e-markets</p>
+                <p><strong>Nombre:</strong> {{usuario.company.name}}</p>
+                <p><strong>Eslogan:</strong> {{usuario.company.catchPhrase}}</p>
+                <p><strong>Especialización:</strong> {{usuario.company.bs}}</p>
               </div>
             </div>
           </div>
@@ -74,72 +42,4 @@
       </div>
     </div>
 
-    <div class="row mx-5">
-      <div class="col-md-6">
-        <div class="container mt-5 card shadow rounded-3 border-4 border-primary-subtle">
-          <div class="row">
-            <div class="col-md-6 ">
-              <div class="wrapper">
-                <div class="profile">
-                  <img src="https://xsgames.co/randomusers/avatar.php?g=female" class="thumbnail foto">
-                  <h3 class="name">Leanne Graham</h3>
-                  <p class="title">Bret</p>
-                  <p class="description"><strong>Teléfono:</strong> 1-770-736-8031 x56442</p>
-                  <p class="description"><strong>Sitio Web:</strong> <a href="http://hildegard.org"
-                      target="_blank">hildegard.org</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 mt-4">
-              <div class="residencia">
-                <h2>Dirección:</h2>
-                <p><strong>Calle:</strong> Kulas Light</p>
-                <p><strong>Suite:</strong> Apt. 556</p>
-                <p><strong>Ciudad:</strong> Gwenborough</p>
-                <p><strong>Código Postal:</strong> 92998-3874</p>
-              </div>
-              <div class="empresa mt-5">
-                <h2>Compañía:</h2>
-                <p><strong>Nombre de la Compañía:</strong> Romaguera-Crona</p>
-                <p><strong>Eslogan:</strong> Multi-layered client-server neural-net</p>
-                <p><strong>Área de Especialización:</strong> Harness real-time e-markets</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="container mt-5 card shadow rounded-3 border-4 border-primary-subtle">
-          <div class="row">
-            <div class="col-md-6 ">
-              <div class="wrapper">
-                <div class="profile">
-                  <img src="https://xsgames.co/randomusers/avatar.php?g=male" class="thumbnail foto">
-                  <h3 class="name">Leanne Graham</h3>
-                  <p class="title">Bret</p>
-                  <p class="description"><strong>Teléfono:</strong> 1-770-736-8031 x56442</p>
-                  <p class="description"><strong>Sitio Web:</strong> <a href="http://hildegard.org"
-                      target="_blank">hildegard.org</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 mt-4">
-              <div class="residencia">
-                <h2>Dirección:</h2>
-                <p><strong>Calle:</strong> Kulas Light</p>
-                <p><strong>Suite:</strong> Apt. 556</p>
-                <p><strong>Ciudad:</strong> Gwenborough</p>
-                <p><strong>Código Postal:</strong> 92998-3874</p>
-              </div>
-              <div class="empresa mt-5">
-                <h2>Compañía:</h2>
-                <p><strong>Nombre de la Compañía:</strong> Romaguera-Crona</p>
-                <p><strong>Eslogan:</strong> Multi-layered client-server neural-net</p>
-                <p><strong>Área de Especialización:</strong> Harness real-time e-markets</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
