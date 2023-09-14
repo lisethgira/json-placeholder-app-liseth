@@ -6,68 +6,21 @@
   <h1 class="text-center mb-3">Comentarios </h1>
   <div class="row">
     <div class="col-md-6 offset-md-3">
-      <div class="card shadow p-3 mb-5 bg-body-tertiary rounded border-primary-subtle border-2">
+      <div class="card shadow p-3 mb-5 bg-body-tertiary rounded border-primary-subtle border-2" *ngFor="let comentario of comentarios">
         <div class="card-body">
           <div class="row">
             <div class="col-2">
               <!-- Agrega el icono de usuario de Font Awesome -->
               <i class="fa-solid fa-user fa-2xl" style="color: #000000; margin-left: 30%;"></i>
-              <p class="card-text mt-2">Carmen_Keeling@caroline.name </p>
+              <p class="card-text mt-2">{{comentario.email}} </p>
             </div>
             <div class="col-10">
-              <h5 class="card-title">qui est esse</h5>
-              <p class="card-text"> est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea dolores
-                neque fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis qui aperiam non debitis
-                possimus qui neque nisi nulla</p>
+              <h5 class="card-title">{{comentario.name}}</h5>
+              <p class="card-text"> {{comentario.body}}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="row">
-    <div class="col-md-6 offset-md-3">
-      <div class="card shadow p-3 mb-5 bg-body-tertiary rounded border-primary-subtle border-2">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-2">
-              <!-- Agrega el icono de usuario de Font Awesome -->
-              <i class="fa-solid fa-user fa-2xl" style="color: #000000; margin-left: 30%;"></i>
-              <p class="card-text mt-2">Carmen_Keeling@caroline.name </p>
-            </div>
-            <div class="col-10">
-              <h5 class="card-title">qui est esse</h5>
-              <p class="card-text"> est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea dolores
-                neque fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis qui aperiam non debitis
-                possimus qui neque nisi nulla</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-6 offset-md-3">
-      <div class="card shadow p-3 mb-5 bg-body-tertiary rounded border-primary-subtle border-2">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-2">
-              <!-- Agrega el icono de usuario de Font Awesome -->
-              <i class="fa-solid fa-user fa-2xl" style="color: #000000; margin-left: 30%;"></i>
-              <p class="card-text mt-2">Carmen_Keeling@caroline.name </p>
-            </div>
-            <div class="col-10">
-              <h5 class="card-title">qui est esse</h5>
-              <p class="card-text"> est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea dolores
-                neque fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis qui aperiam non debitis
-                possimus qui neque nisi nulla</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </div>

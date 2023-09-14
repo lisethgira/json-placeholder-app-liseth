@@ -1,0 +1,11 @@
+.card {
+  height: 600px; /* Altura fija */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  max-width: 100%; /* Limita el ancho máximo de las imágenes al ancho de la tarjeta */
+  height: auto; /* Mantiene la proporción de aspecto */
+}

@@ -1,57 +1,54 @@
-  <!-- Contenido de la pestaña de Publicaciones (puedes agregar contenido aquí) -->
-  <div id="publicaciones" class="tab-content mt-5">
-    <div class="d-flex justify-content-center">
-      <img src="../../assets/images/logoSinFondo.png" alt="logo" width="150" height="150">
-    </div>
-    <h1 class="text-center mb-3">Publicaciones</h1>
-    <div class="row mx-5">
-      <div class="col-md-3">
-        <div class="card shadow border-2">
-          <img src="https://picsum.photos/200?random=1" class="card-img-top" alt="random">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="./comentarios.html" class="btn btn-outline-primary bg-primary-subtle">ver comentarios</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="card shadow border-2">
-          <img src="https://picsum.photos/200?random=2" class="card-img-top" alt="random">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="./comentarios.html" class="btn btn-outline-primary bg-primary-subtle shadow">ver comentarios</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="card shadow border-2">
-          <img src="https://picsum.photos/200?random=3" class="card-img-top" alt="random">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="./comentarios.html" class="btn btn-outline-primary bg-primary-subtle shadow">ver comentarios</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="card shadow border-2">
-          <img src="https://picsum.photos/200?random=4" class="card-img-top" alt="random">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="./comentarios.html" class="btn btn-outline-primary bg-primary-subtle shadow">ver comentarios</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
+<!-- Contenido de la pestaña de Publicaciones (puedes agregar contenido aquí) -->
+<div id="publicaciones" class="tab-content mt-5">
+  <div class="d-flex justify-content-center">
+    <img
+      src="../../assets/images/logoSinFondo.png"
+      alt="logo"
+      width="150"
+      height="150"
+    />
   </div>
+  <h1 class="text-center mb-3">Publicaciones</h1>
+  <div class="row mx-5">
+    <div class="col-md-3" *ngFor="let publicacion of publicaciones.slice((paginaActual - 1) * publicacionesPorPagina, paginaActual * publicacionesPorPagina)">
+      <div class="card shadow border-2 border-primary" style="display: flex; flex-direction: column; height: 100%;">
+          <img src="https://picsum.photos/200?random={{ getRandomNumber() }}" class="card-img-top" alt="random">
+          <div class="card-body" style="flex-grow: 1;">
+              <h5 class="card-title">{{publicacion.title}}</h5>
+              <p class="card-text">{{publicacion.body}}</p>
+          </div>
+          <div class="m-3" style="text-align: left;">
+              <a routerLink="/comments" class="btn btn-outline-primary bg-primary-subtle">ver comentarios</a>
+          </div>
+      </div>
+  </div>
+  </div>
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center mt-5">
+      <li class="page-item">
+        <a
+          class="page-link"
+          (click)="cambiarGrupo(grupoActual - 1)"
+          aria-label="Previous"
+        >
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <ng-container *ngFor="let pagina of paginas">
+        <li class="page-item">
+          <a class="page-link" (click)="cambiarPagina(pagina)">{{ pagina }}</a>
+        </li>
+      </ng-container>
+      <li class="page-item">
+        <a
+          class="page-link"
+          (click)="cambiarGrupo(grupoActual + 1)"
+          aria-label="Next"
+        >
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
